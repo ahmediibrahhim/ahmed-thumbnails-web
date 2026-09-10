@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+
+  --color-bg: #FAF8F4;
+  --color-surface: #FFFFFF;
+  --color-ink: #15161A;
+  --color-dim: #63636B;
+  --color-faint: #9C9CA3;
+  --color-signal: #FF5A2E;
+  --color-mark: #0FA98E;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #FAF8F4;
+    color: #15161A;
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+  ::selection { background: #FF5A2E; color: #FAF8F4; }
+  a { text-decoration: none; color: inherit; }
+  button { font-family: 'Manrope', sans-serif; border: none; background: transparent; color: inherit; cursor: none; }
+  @media (hover: none), (pointer: coarse) {
+    body, button, a { cursor: auto; }
+  }
+}
